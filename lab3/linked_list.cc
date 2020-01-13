@@ -4,12 +4,15 @@
 using namespace std;
 
 // TODO Complementary work needed: for constructors, please use member initialization lists
-Sorted_List::Node::Node() : data(0), next(nullptr)
+Sorted_List::Node::Node()
+  : data(0), next(nullptr)
 {
 }
 
-Sorted_List::Node::Node(Node *next, int data) : this -> data(data), this -> next(next)
+Sorted_List::Node::Node(Node *next, int data)
 {
+  this = data(data);
+  this = next(next);
 }
 
 Sorted_List::Node* Sorted_List::Node:: set_next(Node *ptr)
@@ -48,8 +51,8 @@ void Sorted_List::Node:: printlist()
 
 
 Sorted_List::Sorted_List()
+  : head(nullptr)
 {
-    head = nullptr;
 }
 
 //copy constructure
@@ -71,7 +74,7 @@ Sorted_List::~Sorted_List()
 
 //move constructur
 Sorted_List::Sorted_List(Sorted_List&& other)
-    : head(nullptr)
+  : head(nullptr)
 {
     *this = std::move(other);
 }

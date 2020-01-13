@@ -129,21 +129,27 @@ TEST_CASE( "Create an empty list" ) {
 
 // TODO Complementary work needed: missing tests for move assignment, please add this :)
 
-    SECTION("Testing if our move constructure works :)" )
-    {
-    	l.insert(3);
-    	l.insert(4);
-    	l.insert(5);
-    	l.insert(2);
-        Sorted_List l3(std::move(l));
-	l.printlist();
-	l3.printlist();
-    }
+  SECTION("Testing if our move constructure works :)"
+  {
+  	l.insert(3);
+    l.insert(4);
+    l.insert(5);
+    l.insert(2);
+    Sorted_List l3(std::move(l));
+  	l.printlist();
+  	l3.printlist();
+  }
 
     SECTION("Testing if our move assignment works <3")
     {
-      Sorted_List l4{} = l3();
+      Sorted_List l4{};
+      l.insert(4);
+      l.insert(7);
+      l.insert(2);
+      Sorted_List l5{};
+      l5 = std::move(l4);
       l4.printlist();
+      l5.printlist();
     }
 
     SECTION("Testing with random generation")
