@@ -12,7 +12,7 @@ class Connection
 
 public:
 	Connection(string name);
-	Connection(string name, bool thisIsSink) const;
+	Connection(string name, bool thisIsSink);
 	~Connection();
 
 	//Utskrift

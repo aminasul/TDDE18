@@ -11,7 +11,7 @@ Connection::Connection(string name)
 	voltage = 0.0;
 }
 
-Connection::Connection(string name, bool thisIsSink) const
+Connection::Connection(string name, bool thisIsSink)
 {
 	_name = name;
 	sink = thisIsSink;

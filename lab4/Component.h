@@ -15,9 +15,9 @@ public:
 
     string get_name() const;
     Connection* get_terminal(int i);
-    double get_voltage const();
+    double get_voltage() const;
     void set_voltage(double v);
-    double get_current const();
+    double get_current() const;
     void set_current(double c);
 
 private:

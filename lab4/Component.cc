@@ -18,7 +18,7 @@ void Component::simulate(double lapse)
     //kommer bli overridad av barnen
 }
 
-string Component::get_name() const
+string Component::get_name const()
 {
     return _name;
 }
@@ -28,7 +28,7 @@ Connection* Component:: get_terminal(int i)
     return (i == 1) ? _t1 : (i == 2) ? _t2: nullptr;
 }
 
-double Component::get_voltage() const
+double Component::get_voltage const()
 {
     return voltage;
 }
@@ -37,7 +37,7 @@ void Component::set_voltage(double v)
 {
     voltage = v;
 }
-double Component::get_current() const
+double Component::get_current const()
 {
     return current;
 }
