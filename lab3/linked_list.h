@@ -18,15 +18,17 @@ public:
     void insert(int data);
     void printlist() const;
     void remove(int value);
-    void deep_copy(const Sorted_List& l); 
+    void deep_copy(const Sorted_List& l);
     Sorted_List& operator =(const Sorted_List& l);
     Sorted_List& operator =(Sorted_List&& other);
     int at(int value) const;
-    
+
+    //Hejsan
+
 
 private:
     class Node
-    {	
+    {
     public:
 	Node();
 	Node(Node *next, int data);
